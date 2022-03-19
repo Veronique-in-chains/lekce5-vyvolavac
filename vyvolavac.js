@@ -28,6 +28,8 @@ let jmena = [
 ];
 
 let tazenaJmena = [];
+let seznam;
+let pocet;
 
 function tahnoutJmeno() {
     if (jmena.length === 0) {
@@ -44,11 +46,20 @@ function tahnoutJmeno() {
     jmena.splice(vyherniIndex, 1);
 
     // Výherní jméno si uložíme do pole k ostatním výherním
-    tazenaJmena.push(vyherniJmeno);
+    tazenaJmena.unshift(vyherniJmeno);
 
     let vyherce = document.querySelector('#vyherka');
     vyherce.textContent = vyherniJmeno;
 
-    let seznam = document.querySelector('#seznam');
+    seznam = document.querySelector('#seznam');
     seznam.textContent = tazenaJmena;
+
+    pocet = document.querySelector("#pocet");
+    pocet.textContent = tazenaJmena.length;
+}
+
+function naZacatek() {
+  tazenaJmena = [];
+  seznam.textContent = "Seznam vyvolaných";
+  pocet.textContent = "Počet již vyzkoušených";
 }

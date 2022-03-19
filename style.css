@@ -70,6 +70,11 @@ h2 {
 	outline: 0;
 }
 
+.modre {
+  background: #9795f0 linear-gradient(to top, #9795f0 0%, #6967f5 100%);
+  margin-top: 20px;
+}
+
 .tlacitko:hover {
 	box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
 	transform: translateY(-2px);
